@@ -1,0 +1,245 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js"></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="app.css">
+    <title>Work Hour and Wage Calculator</title>
+</head>
+
+<body>
+    <br> <br> <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-10">
+                <h1 class="display-6 text-center">Work Hour and Wage Calculator</h1>
+            </div>
+            <div class="col-md-1"></div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="container-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-6" id="form">
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="timestart1">Start Time</label>
+                            <input type="datetime-local" class="form-control" value="" id="timestart1"
+                                placeholder="Time Start">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="timeend1">End Time</label>
+                            <input type="datetime-local" class="form-control" onChange="myFunction1()" id="timeend1"
+                                placeholder="Time End">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="timestart2">Start Time</label>
+                            <input type="datetime-local" class="form-control" value="" id="timestart2"
+                                placeholder="Time Start">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="timeend2">End Time</label>
+                            <input type="datetime-local" class="form-control" onChange="myFunction2()" id="timeend2"
+                                placeholder="Time End">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="timestart3">Start Time</label>
+                            <input type="datetime-local" class="form-control" value="" id="timestart3"
+                                placeholder="Time Start">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="timeend3">End Time</label>
+                            <input type="datetime-local" class="form-control" onChange="myFunction3()" id="timeend3"
+                                placeholder="Time End">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="timestart4">Start Time</label>
+                            <input type="datetime-local" class="form-control" value="" id="timestart4"
+                                placeholder="Time Start">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="timeend4">End Time</label>
+                            <input type="datetime-local" class="form-control" onChange="myFunction4()" id="timeend4"
+                                placeholder="Time End">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="timestart5">Start Time</label>
+                            <input type="datetime-local" class="form-control" value="" id="timestart5"
+                                placeholder="Time Start">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="timeend5">End Time</label>
+                            <input type="datetime-local" class="form-control" onChange="myFunction5()" id="timeend5"
+                                placeholder="Time End">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="timestart6">Start Time</label>
+                            <input type="datetime-local" class="form-control" value="" id="timestart6"
+                                placeholder="Time Start">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="timeend6">End Time</label>
+                            <input type="datetime-local" class="form-control" onChange="myFunction6()" id="timeend6"
+                                placeholder="Time End">
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary" onclick="window.location.reload();">Reset</button>
+
+                    <div id="demo">
+
+                    </div>
+                </div>
+                <div class="col-md-3"></div>
+            </div>
+        </div>
+    </div>
+    <br>
+
+    <div class="container-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-10">
+                    <table class="table text-center">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Worked Hours</th>
+                                <th scope="col">Worked Minutes</th>
+                                <th scope="col">Paid Hours</th>
+                                <th scope="col">Paid Minutes</th>
+                                <th scope="col">Daily Wage (USD)</th>
+                                <th scope="col">Expected Weekly Wage (USD)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Lipsum</td>
+                                <td id="workedHour1"></td>
+                                <td id="workedMin1"></td>
+                                <td id="paidHour1"></td>
+                                <td id="paidMin1"></td>
+                                <td id="dailyWage1"></td>
+                                <td id="weeklyWage1"></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>Lipsum</td>
+                                <td id="workedHour2"></td>
+                                <td id="workedMin2"></td>
+                                <td id="paidHour2"></td>
+                                <td id="paidMin2"></td>
+                                <td id="dailyWage2"></td>
+                                <td id="weeklyWage2"></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>Lipsum</td>
+                                <td id="workedHour3"></td>
+                                <td id="workedMin3"></td>
+                                <td id="paidHour3"></td>
+                                <td id="paidMin3"></td>
+                                <td id="dailyWage3"></td>
+                                <td id="weeklyWage3"></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">4</th>
+                                <td>Lipsum</td>
+                                <td id="workedHour4"></td>
+                                <td id="workedMin4"></td>
+                                <td id="paidHour4"></td>
+                                <td id="paidMin4"></td>
+                                <td id="dailyWage4"></td>
+                                <td id="weeklyWage4"></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">5</th>
+                                <td>Lipsum</td>
+                                <td id="workedHour5"></td>
+                                <td id="workedMin5"></td>
+                                <td id="paidHour5"></td>
+                                <td id="paidMin5"></td>
+                                <td id="dailyWage5"></td>
+                                <td id="weeklyWage5"></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">6</th>
+                                <td>Lipsum</td>
+                                <td id="workedHour6"></td>
+                                <td id="workedMin6"></td>
+                                <td id="paidHour6"></td>
+                                <td id="paidMin6"></td>
+                                <td id="dailyWage6"></td>
+                                <td id="weeklyWage6"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-10">
+                <p class="lead text-center" style="font-size: 16px; color: #023047;">* Maximum Work Time allowed is 24
+                    hours and an overtime span of 30 minutes</p>
+                <p class="lead text-center" style="font-size: 16px; color: #023047;">* Daily wage would be calculated
+                    accordingly. </p>
+                <p class="lead text-center" style="font-size: 16px; color: #023047;">* Expected weekly wage is
+                    calculated at rate of 5 working days a week.</p>
+
+            </div>
+            <div class="col-md-1"></div>
+        </div>
+    </div>
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
+</script>
+<title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
